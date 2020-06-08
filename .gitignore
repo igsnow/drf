@@ -1,0 +1,18 @@
+.DS_Store
+
+# local env files
+.env.local
+.env.*.local
+
+# Editor directories and files
+.idea
+.vscode
+.vs
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# python
+Pipfile.lock
