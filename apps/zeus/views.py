@@ -7,4 +7,4 @@ class HelloWorldViewSet(GenericViewSet):
 
     @action(detail=False)
     def world(self, request, *args, **kwargs):
-        return Response({"code": 200, "msg": " igsnow!"})
+        return Response({"code": 200, "msg": " hi igsnow!"})
