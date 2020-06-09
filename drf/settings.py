@@ -11,9 +11,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import sys
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# 将extra_apps的添加至python项目的搜索目录
+sys.path.insert(0, os.path.join(BASE_DIR, 'extra_apps'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -37,7 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'apps.zeus',
-    'corsheaders'
+    'corsheaders',
+    # 第三方管理后台
+    'xadmin',
+    # 相关依赖
+    'crispy_forms',
+    # 相关依赖
+    'reversion',
 ]
 
 MIDDLEWARE = [
